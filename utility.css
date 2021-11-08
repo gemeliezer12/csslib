@@ -6,7 +6,7 @@
   --purple: rgb(255, 0, 255);
   --red: rgb(255, 0, 50);
   --orange: rgb(255, 100, 0);
-  --yellow: rgb(200, 200, 0);
+  --yellow: rgb(255, 200, 50);
 
   /* Dark Mode */
 
@@ -14,13 +14,21 @@
   --bg-color-2: rgba(40, 45, 50);
   --text-color-1: rgba(145, 150, 155);
   --text-color-2: white;
+  --bg-comp-color-1: rgb(225, 235, 245);
+  --bg-comp-color-2: white;
+  --text-comp-color-1: rgba(60, 75, 90);
+  --text-comp-color-2: black;
 }
 
 body.light {
-  --bg-color-1: rgb(230, 240, 250);
+  --bg-color-1: rgb(225, 235, 245);
   --bg-color-2: white;
   --text-color-1: rgba(60, 75, 90);
   --text-color-2: black;
+  --bg-comp-color-1: rgb(20, 25, 30);
+  --bg-comp-color-2: rgba(40, 45, 50);
+  --text-comp-color-1: rgba(145, 150, 155);
+  --text-comp-color-2: white;
 }
 
 ::selection {
@@ -42,7 +50,7 @@ body.light {
   border: none;
   list-style: none;
   line-height: 140%;
-  transition: all 0.1s ease;
+  transition: inherit;
 }
 
 body {
@@ -50,6 +58,7 @@ body {
   font-family: "sofia-pro", sans-serif;
   font-size: 16px;
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 /* Font Family */
@@ -507,73 +516,6 @@ body {
 .margin-y-120 {
   margin-top: 120px;
   margin-bottom: 120px;
-}
-
-/* Margin X */
-
-.margin-x-4 {
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
-.margin-x-6 {
-  margin-right: 6px;
-  margin-left: 6px;
-}
-
-.margin-x-10 {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.margin-x-15 {
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-.margin-x-20 {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
-.margin-x-26 {
-  margin-right: 26px;
-  margin-left: 26px;
-}
-
-.margin-x-32 {
-  margin-right: 32px;
-  margin-left: 32px;
-}
-
-.margin-x-40 {
-  margin-right: 40px;
-  margin-left: 40px;
-}
-
-.margin-x-50 {
-  margin-right: 50px;
-  margin-left: 50px;
-}
-
-.margin-x-60 {
-  margin-right: 60px;
-  margin-left: 60px;
-}
-
-.margin-x-80 {
-  margin-right: 80px;
-  margin-left: 80px;
-}
-
-.margin-x-100 {
-  margin-right: 100px;
-  margin-left: 100px;
-}
-
-.margin-x-120 {
-  margin-right: 120px;
-  margin-left: 120px;
 }
 
 /* Padding Top */
@@ -1085,6 +1027,10 @@ body {
   flex-wrap: wrap;
 }
 
+.overflow-wrap {
+  overflow-wrap: anywhere;
+}
+
 .block {
   display: block;
 }
@@ -1110,6 +1056,11 @@ body {
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
 }
 
 .justify-start {
@@ -1507,6 +1458,7 @@ body {
   resize: both;
 }
 
-img {
-  display: block;
+.overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
 }
